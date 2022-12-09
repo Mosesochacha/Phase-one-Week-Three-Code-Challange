@@ -1,0 +1,20 @@
+body{
+    background-color: #ff69b4;
+
+}
+.menu_list{
+    color: #fff634;
+}
+.cotainer-fluid{
+    background-color: #ff69b4;
+}
+#Information{
+    color: deeppink;
+    font-size: 5vh;
+    font-family: Times Roman;
+}
+#menu_lists{
+  font-size: 4.5vh;
+  font-family: calibri;
+  font: bold;
+}

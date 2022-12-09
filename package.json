@@ -1,0 +1,26 @@
+{
+  "name": "weewk-three-cod-challange",
+  "version": "1.0.0",
+  "description": "week three code challange",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "npm test",
+   "start":"json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mosesochacha/weewk-three-cod-challange.git"
+  },
+  "keywords": [
+    "js",
+    "html",
+    "css",
+    "bootstrap"
+  ],
+  "author": "Moses Ochacha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mosesochacha/weewk-three-cod-challange/issues"
+  },
+  "homepage": "https://github.com/Mosesochacha/weewk-three-cod-challange#readme"
+}
