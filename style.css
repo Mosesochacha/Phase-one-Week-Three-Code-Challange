@@ -4,6 +4,8 @@ body{
 }
 .menu_list{
     color: #fff634;
+    cursor: pointer;
+    
 }
 .cotainer-fluid{
     background-color: #ff69b4;
