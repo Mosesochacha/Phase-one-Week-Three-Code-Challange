@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 
     }
+    // creating funtion of the top most movies
     const topMovies = ()=>{
         fetch (Films_Api)
         .then((response)=>response.json())
@@ -27,8 +28,8 @@ document.addEventListener('DOMContentLoaded',()=>{
             const tickets_sold =filmData.tickets_sold
             const capacity =filmData.capacity
             const availableTickets = +capacity- +tickets_sold
+            const soldTickets = +capacity -(+tickets_sold+ +1)
             
-       // const mealList= document.getElementsByClassName('menu_list')
         const information = document.getElementById('Information')
         const image = document.getElementById('poster')
 
@@ -38,12 +39,21 @@ document.addEventListener('DOMContentLoaded',()=>{
             <li>Runtime: ${runtime}</li>
             <li>Showtime: ${showtime}</li>
             <li>Available-Tickets: ${availableTickets}</li>
-             <button class="btn btn-primary" type="submit" id = "btn">BUTTON</button>
+             <button class="btn btn-primary" type="submit" id = "btn">Buy</button>
             `
             image.src=poster
+            information.querySelector('#btn').addEventListener('click',(updateData)=>{
+                information.innerHTML = `
+                <li>Title: ${title}</li>
+            <li>Runtime: ${runtime}</li>
+            <li>Showtime: ${showtime}</li>
+            <li>Available-Tickets: ${soldTickets}</li>
+             <button class="btn btn-primary" type="submit" id = "btn">Buy</button>
+                 `
+               })    
          })
         }
-
+       
          // creating menu of the films
         const moviesList = () =>{
             fetch(Films_Api)
@@ -59,13 +69,10 @@ document.addEventListener('DOMContentLoaded',()=>{
                     })
                     movies.innerHTML= `${filmsMenu}`
                     menu_lists.appendChild(movies)
-                    
-                   })
-
-
-                
+                   })   
             })
         }
+        // displaying data of the whole movies
         const displays = (filmData)=>{
             fetch (Films_Api)
         .then((response)=>response.json())
@@ -78,8 +85,8 @@ document.addEventListener('DOMContentLoaded',()=>{
                 const tickets_sold =filmData.tickets_sold
                 const capacity =filmData.capacity
                 const availableTickets = +capacity- +tickets_sold
+                const soldTickets = +capacity -(+tickets_sold+ +1)
                 
-           // const mealList= document.getElementsByClassName('menu_list')
             const information = document.getElementById('Information')
             const image = document.getElementById('poster')
 
@@ -88,14 +95,24 @@ document.addEventListener('DOMContentLoaded',()=>{
             <li>Runtime: ${runtime}</li>
             <li>Showtime: ${showtime}</li>
             <li>Available-Tickets: ${availableTickets}</li>
-             <button class="btn btn-primary" type="submit" id = "btn">BUTTON</button>
+             <button class="btn btn-primary" type="submit" id = "btn">Buy</button>
             `
-            image.src=poster    
+            image.src=poster
+            // adding event listerner to update buying of movies
+            information.querySelector('#btn').addEventListener('click',()=>{
+                information.innerHTML = `
+                <li>Title: ${title}</li>
+            <li>Runtime: ${runtime}</li>
+            <li>Showtime: ${showtime}</li>
+            <li>Available-Tickets: ${soldTickets}</li>
+             <button class="btn btn-primary" type="submit" id = "btn">Buy</button>
+                `   
+               })    
             })
-                
+                   
             });
         }
+        // calling functions
     moviesList()
     topMovies();
-    
 })
