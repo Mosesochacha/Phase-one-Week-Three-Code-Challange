@@ -2,6 +2,12 @@ body{
     background-color: #ff69b4;
 
 }
+#dango{
+    color: aqua; 
+    font-size: 7vh;
+    font-family: Times New Roman;
+    font-weight: bold;
+}
 .menu_list{
     color: #fff634;
     cursor: pointer;
