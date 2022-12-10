@@ -56,3 +56,10 @@ h3{
     height: fit-content;
     width: fit-content;
 }
+
+#times{
+    margin-left: 60vh;
+    font-size: 5vh;
+    font-family: Tahoma;
+    color: #00ff00;
+}

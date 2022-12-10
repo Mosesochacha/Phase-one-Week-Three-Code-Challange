@@ -8,15 +8,25 @@ document.addEventListener('DOMContentLoaded',()=>{
         const rowDiv = document.createElement('div')
         rowDiv.classList.add('row')
 
-        const mealList= document.getElementsByClassName('menu_list')
+        const menu_list= document.getElementsByClassName('menu_list')
         const information = document.getElementById('Information')
         const image = document.getElementById('poster')
         const movie = document.getElementById('movie')
         const menu = document.getElementById('menu')
         const container = document.getElementById('container')
+        const times = document.getElementsById('times')
 
 
     }
+      function showtime(){
+        let dateTime = new Date ()
+        let time =dateTime.toLocaleString()
+        const times = document.getElementById('times')
+        times.innerHTML=`
+         ${time}
+        `
+      }
+      let display = setInterval(showtime,1)
     // creating funtion of the top most movies
     const topMovies = ()=>{
         fetch (Films_Api)
@@ -122,4 +132,5 @@ document.addEventListener('DOMContentLoaded',()=>{
         // calling functions
     moviesList()
     topMovies();
+    showtime();
 })
