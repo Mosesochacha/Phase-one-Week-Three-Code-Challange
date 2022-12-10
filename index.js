@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded',()=>{
         const mealList= document.getElementsByClassName('menu_list')
         const information = document.getElementById('Information')
         const image = document.getElementById('poster')
+        const movie = document.getElementById('movie')
+        const menu = document.getElementById('menu')
+        const container = document.getElementById('container')
 
 
     }
@@ -35,6 +38,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
             
             information.innerHTML=`
+            <h3 id="info ">Information</h3>
             <li>Title: ${title}</li>
             <li>Runtime: ${runtime}</li>
             <li>Showtime: ${showtime}</li>
@@ -44,6 +48,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             image.src=poster
             information.querySelector('#btn').addEventListener('click',(updateData)=>{
                 information.innerHTML = `
+                <h3 id="info ">Information</h3>
                 <li>Title: ${title}</li>
             <li>Runtime: ${runtime}</li>
             <li>Showtime: ${showtime}</li>
@@ -91,6 +96,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             const image = document.getElementById('poster')
 
             information.innerHTML=`
+            <h3 id="info ">Information</h3>
             <li>Title: ${title}</li>
             <li>Runtime: ${runtime}</li>
             <li>Showtime: ${showtime}</li>
@@ -101,6 +107,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             // adding event listerner to update buying of movies
             information.querySelector('#btn').addEventListener('click',()=>{
                 information.innerHTML = `
+                <h3 id="info ">Information</h3>
                 <li>Title: ${title}</li>
             <li>Runtime: ${runtime}</li>
             <li>Showtime: ${showtime}</li>

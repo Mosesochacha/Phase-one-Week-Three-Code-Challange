@@ -12,11 +12,47 @@ body{
 }
 #Information{
     color: deeppink;
-    font-size: 5vh;
+    font-size: 4.1vh;
     font-family: Times Roman;
+    word-spacing: 0vh;
+    text-align: center;
+    
 }
 #menu_lists{
-  font-size: 4.5vh;
+  font-size: 3.5vh;
   font-family: calibri;
   font: bold;
+  height: fit-content;
+  height: fit-content;
+}
+#btn{
+    padding: 1px 35px;
+    margin-left: 90px;
+    color: #00ff00;
+    background-color: brown;
+    border-color: chartreuse;
+    border-radius: 100px;
+
+}
+h3{
+    color: #00ff00;
+    background-color: aqua;
+    text-align: center;
+
+}
+#movie{
+    text-align: center;
+    color: #ff69b4;
+    font-family: Times New ROMAN;
+}
+#menu {
+    text-align: center;
+    color: #ff69b4;
+    font-family: Times New ROMAN;
+    
+}
+#container{
+    background-color: coral;
+    height: fit-content;
+    width: fit-content;
 }
