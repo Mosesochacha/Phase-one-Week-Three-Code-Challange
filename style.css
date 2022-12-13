@@ -69,3 +69,11 @@ h3{
     font-family: Tahoma;
     color: #00ff00;
 }
+#tickets{
+   color: tomato;
+   font-weight: bolder;
+}
+#image{
+ height: 12vh;
+ width: 240vh;
+}

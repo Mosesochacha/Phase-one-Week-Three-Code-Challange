@@ -52,20 +52,21 @@ document.addEventListener('DOMContentLoaded',()=>{
             <li>Title: ${title}</li>
             <li>Runtime: ${runtime}</li>
             <li>Showtime: ${showtime}</li>
-            <li>Available-Tickets: ${availableTickets}</li>
+            <li id ="tickets">Available-Tickets: ${availableTickets}</li>
              <button class="btn btn-primary" type="submit" id = "btn">Buy</button>
             `
+            information.querySelector("#btn").addEventListener('click', ()=>{
+                const tickets = document.getElementById("tickets")
+                if(availableTickets===0){
+                    tickets.textContent = `Tickets Sold`
+                }
+                else{
+                    const ticks = +capacity -(+tickets_sold+ +1)
+                    tickets.textContent =` Available-Tickets: ${ticks}`
+                }
+
+            })
             image.src=poster
-            information.querySelector('#btn').addEventListener('click',(updateData)=>{
-                information.innerHTML = `
-                <h3 id="info ">Information</h3>
-                <li>Title: ${title}</li>
-            <li>Runtime: ${runtime}</li>
-            <li>Showtime: ${showtime}</li>
-            <li>Available-Tickets: ${soldTickets}</li>
-             <button class="btn btn-primary" type="submit" id = "btn">Buy</button>
-                 `
-               })    
          })
         }
        
@@ -110,21 +111,24 @@ document.addEventListener('DOMContentLoaded',()=>{
             <li>Title: ${title}</li>
             <li>Runtime: ${runtime}</li>
             <li>Showtime: ${showtime}</li>
-            <li>Available-Tickets: ${availableTickets}</li>
+            <li id="tickets" >Available-Tickets: ${availableTickets}</li>
              <button class="btn btn-primary" type="submit" id = "btn">Buy</button>
             `
+            information.querySelector("#btn").addEventListener('click', ()=>{
+                
+                const tickets = document.getElementById("tickets")
+                if(availableTickets===0){
+                    tickets.textContent = `Tickets Sold`
+                }
+                else{
+                    const ticks = +capacity -(+tickets_sold+ +1)
+                    tickets.textContent =` Available-Tickets: ${ticks}`
+                }
+                
+
+            })
             image.src=poster
-            // adding event listerner to update buying of movies
-            information.querySelector('#btn').addEventListener('click',()=>{
-                information.innerHTML = `
-                <h3 id="info ">Information</h3>
-                <li>Title: ${title}</li>
-            <li>Runtime: ${runtime}</li>
-            <li>Showtime: ${showtime}</li>
-            <li>Available-Tickets: ${soldTickets}</li>
-             <button class="btn btn-primary" type="submit" id = "btn">Buy</button>
-                `   
-               })    
+            
             })
                    
             });
