@@ -67,7 +67,6 @@ document.addEventListener('DOMContentLoaded',(event)=>{
                 else if(filmData.capacity = filmData.tickets_sold){
                     tickets.textContent =` Tickets Sold Out`
                 }
-                event.preventDefault()
 
             })
             image.src=poster
@@ -86,7 +85,7 @@ document.addEventListener('DOMContentLoaded',(event)=>{
                     movies.addEventListener('click',(event)=>{
                         event.preventDefault()
                         const i = item.id
-                        displays(data[i-1])
+                        displays(data.films[i-1])
                     })
                     movies.innerHTML= `${filmsMenu}`
                     menu_lists.appendChild(movies)
@@ -98,7 +97,8 @@ document.addEventListener('DOMContentLoaded',(event)=>{
             fetch (Films_Api)
         .then((response)=>response.json())
         .then((data)=>{
-            data.forEach(element => {
+            data.films.forEach(element =>{
+             
                 const poster  = filmData.poster
                 const title = filmData.title
                 const runtime = filmData.runtime
