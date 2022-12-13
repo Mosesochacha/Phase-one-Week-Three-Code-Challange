@@ -1,4 +1,4 @@
-const Films_Api = ' http://localhost:3000/films'
+const Films_Api ='https://mosesochacha.github.io/db.json'
 document.addEventListener('DOMContentLoaded',(event)=>{
     event.preventDefault();
     // craete movies list
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded',(event)=>{
         .then((response)=>response.json())
         .then((data)=>{
             
-            const filmData = data[0];
+            const filmData = data.films[0];
             const poster  = filmData.poster
             const title = filmData.title
             const runtime = filmData.runtime
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded',(event)=>{
             fetch(Films_Api)
             .then((response)=>response.json())
             .then((data)=>{
-                data.map(item=>{
+                data.films.map(item=>{
                     const filmsMenu = item.title
                     const menu_lists= document.getElementById('menu_lists')
                     const movies = document.createElement('li')
