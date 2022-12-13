@@ -1,5 +1,6 @@
 const Films_Api = ' http://localhost:3000/films'
-document.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded',(event)=>{
+    event.preventDefault();
     // craete movies list
     const menuLists=(names)=>{
         const CardDiv = document.createElement('div')
@@ -55,15 +56,18 @@ document.addEventListener('DOMContentLoaded',()=>{
             <li id ="tickets">Available-Tickets: ${availableTickets}</li>
              <button class="btn btn-primary" type="submit" id = "btn">Buy</button>
             `
-            information.querySelector("#btn").addEventListener('click', ()=>{
-                const tickets = document.getElementById("tickets")
-                if(availableTickets===0){
-                    tickets.textContent = `Tickets Sold`
+            const tickets = document.getElementById("tickets")
+            information.querySelector("#btn").addEventListener('click', (event)=>{
+                event.preventDefault()
+                 filmData.tickets_sold+= 1
+                  const ticks = filmData.capacity - filmData.tickets_sold
+                if(filmData.capacity > filmData.tickets_sold){
+                    tickets.textContent = ` Available-Tickets: ${ticks}`
                 }
-                else{
-                    const ticks = +capacity -(+tickets_sold+ +1)
-                    tickets.textContent =` Available-Tickets: ${ticks}`
+                else if(filmData.capacity = filmData.tickets_sold){
+                    tickets.textContent =` Tickets Sold Out`
                 }
+                event.preventDefault()
 
             })
             image.src=poster
@@ -79,7 +83,8 @@ document.addEventListener('DOMContentLoaded',()=>{
                     const filmsMenu = item.title
                     const menu_lists= document.getElementById('menu_lists')
                     const movies = document.createElement('li')
-                    movies.addEventListener('click',()=>{
+                    movies.addEventListener('click',(event)=>{
+                        event.preventDefault()
                         const i = item.id
                         displays(data[i-1])
                     })
@@ -114,15 +119,18 @@ document.addEventListener('DOMContentLoaded',()=>{
             <li id="tickets" >Available-Tickets: ${availableTickets}</li>
              <button class="btn btn-primary" type="submit" id = "btn">Buy</button>
             `
-            information.querySelector("#btn").addEventListener('click', ()=>{
-                
-                const tickets = document.getElementById("tickets")
-                if(availableTickets===0){
-                    tickets.textContent = `Tickets Sold`
+            const tickets = document.getElementById("tickets")
+            information.querySelector("#btn").addEventListener('click', (event)=>{
+                event.preventDefault()
+
+                filmData.tickets_sold+= 1
+           
+                const ticks = filmData.capacity - filmData.tickets_sold
+                if(filmData.capacity > filmData.tickets_sold){
+                    tickets.textContent = ` Available-Tickets: ${ticks}`
                 }
-                else{
-                    const ticks = +capacity -(+tickets_sold+ +1)
-                    tickets.textContent =` Available-Tickets: ${ticks}`
+                else if(filmData.capacity = filmData.tickets_sold){
+                    tickets.textContent =` Tickets Sold Out`
                 }
                 
 
@@ -132,9 +140,11 @@ document.addEventListener('DOMContentLoaded',()=>{
             })
                    
             });
+           
         }
+       
         // calling functions
     moviesList()
     topMovies();
-    showtime();
+    showtime()
 })
