@@ -16,7 +16,11 @@
                       npm init
       - Then follow the procedure. 
       - install live-server extension by running the following command
-                      npm i -g json-server       
+                      npm i -g json-server   
+##  Deployment
+ To view my application on website click 0n the link below
+
+                https://mosesochacha.github.io/Phase-one-Week-Three-Code-Challange/    
  
 ## Running and testing
 Running the application is very straight forward. You can use the following steps to run the app.
