@@ -1,6 +1,12 @@
 const Films_Api ='https://mosesochacha.github.io/db.json'
 document.addEventListener('DOMContentLoaded',(event)=>{
     event.preventDefault();
+    const navbar = document.getElementById('navbar')
+    const sign_up = document.getElementById('sign_up')
+    const sign_in = document.getElementById('sign_in')
+    const container = document.getElementById('container')
+    const btnr = document.getElementById('btnr')
+    const btnl = document.getElementById('btnl')
     // craete movies list
     const menuLists=(names)=>{
         const CardDiv = document.createElement('div')

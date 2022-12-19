@@ -9,19 +9,60 @@
     <title>Flatdango Movie Theater</title>
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-primary">
+    <nav id="navbar" class="navbar navbar-dark bg-primary" hidden>
         <div class="container-fluid "></div>
         <a href="" class="navbar-brand" id="dango">Flatdango Films</a>
          <ul class="navbar-nav me-auto d-flex flex-row " id="times">hi</ul>
          <div class="text-end">
             <img id= 'image' src="pexels-pixabay-275977.jpg" class="rounded" alt="logo">
           </div>
-         <!-- <form role="search" class="d-flex">
-            <input type="search" class="form-control me-2" placeholder="search" aria-label="search">
-             <button class="btn btn-info ms-1 "id="searchBtn" type="submit">search</button>
-         </form> -->
            
     </nav>
+    <!-- sign up form -->
+    <div id="form" class="d-flex">
+        <div id="sign_up" class="bg-info" hidden>
+            <form>
+                <div>
+                    <lebel for="firstName">firstName </lebel>
+                    <input type="text" placeholder="enter First Name">
+                    
+                </div>
+                <div>
+                    <label for="LastName">LastName</label>
+                    <input type="text" placeholder="LastName" required>
+                </div>
+                <div> 
+                    <label for="InputEmail">Email</label>
+                    <input type="email" placeholder="enter email" required>
+                </div>
+                <div>
+                    <label for="InputPassword">Password</label>
+                    <input type="password" placeholder="enter password" required>
+                </div>
+                <di id="btnr">
+                    <button type="submit" class="bg-info" id="">register</button>
+                </di>
+            </form>
+
+        </div>
+        <div id="sign_in" class="bg-primary">
+            <form>
+                <div> 
+                    <label for="InputEmail">Email</label>
+                    <input type="email" placeholder="enter email" required>
+                </div>
+                <div>
+                    <label for="InputPassword">Password</label>
+                    <input type="password" placeholder="enter password" required>
+                </div>
+                <div id="btnl">
+                    <button type="submit" class="bg-info">login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+        
     <div class="container-fluid" id="container">
         <div class="row mt-3" id="Flatdango_Movies">
                     <div class="col-4 bg-danger">
@@ -32,7 +73,7 @@
                     </div>
                     <div class="col-4">
                         <h3 class="bg-info text-md-center " id="movie">Movie poster</h3>
-                        <img src="" alt="" class="card-img rounded mx-auto d-block"  id="poster">
+                        <img  src="" alt="" class="card-img rounded mx-auto d-block bg-danger"  id="poster">
                     </div>
                     
                     <div class="col-4 text-md-start bg-warning " id="Information">
@@ -40,9 +81,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-    </div>
+       
     
     <script src="bootstrap.js"></script>
     <script src="index.js"></script>
