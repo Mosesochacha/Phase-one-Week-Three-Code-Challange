@@ -7,6 +7,23 @@ document.addEventListener('DOMContentLoaded',(event)=>{
     const container = document.getElementById('container')
     const btnr = document.getElementById('btnr')
     const btnl = document.getElementById('btnl')
+    btnr.addEventListener('click',(e)=>{
+        e.preventDefault()
+        
+        container.style.display = "none"
+        navbar.style.display = "none"
+        sign_in.removeAttribute('hidden')
+        sign_in.style.display = "flex"
+        sign_up.style.display = "none"
+    })
+
+    btnl.addEventListener('click',()=>{
+        sign_in.style.display = "none"
+        sign_up.style.display = "none"
+        container.removeAttribute('hidden')
+        container.style.display = "flex"
+        
+    })
     // craete movies list
     const menuLists=(names)=>{
         const CardDiv = document.createElement('div')
