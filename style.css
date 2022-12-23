@@ -1,3 +1,24 @@
+#sign_up{
+    margin-left: 60vh;
+    margin-top: 25vh;
+    height: 50vh;
+    justify-content: center;
+    
+}
+#sign_in{
+    margin-left: 60vh;
+    margin-top: 25vh;
+    height: 50vh;
+    justify-content: center;
+    
+}
+.btn-btn{
+    margin-top: 2vh;
+    padding: 0vh 12vh;
+    text-align: center;
+    border:2vh solid #00ff00;
+    margin-left: 7vh;
+}
 body{
     background-color: #ff69b4;
 

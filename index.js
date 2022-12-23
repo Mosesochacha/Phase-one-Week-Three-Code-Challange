@@ -20,9 +20,11 @@ document.addEventListener('DOMContentLoaded',(event)=>{
     btnl.addEventListener('click',()=>{
         sign_in.style.display = "none"
         sign_up.style.display = "none"
-        container.removeAttribute('hidden')
+         container.removeAttribute('hidden')
         container.style.display = "flex"
-        
+        navbar.removeAttribute('hidden')
+        navbar.style.display = "flex"
+
     })
     // craete movies list
     const menuLists=(names)=>{
